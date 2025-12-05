@@ -1,0 +1,231 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background: #f8f6f2;
+  color: #333;
+  line-height: 1.65;
+}
+
+header {
+  background: white;
+  padding: 18px 0;
+  border-bottom: 2px solid #d6b065;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.top-bar {
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar img{
+height:50px;
+width: auto;
+border-radius:8px;
+}
+
+.about-link {
+  color: #6a4e15;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color .3s ease;
+}
+
+.about-link:hover {
+  color: #b88f2f;
+}
+
+.title {
+  font-size: 2rem;
+  letter-spacing: 1.2px;
+  text-align: center;
+  flex: 1;
+  color: #3a2a0d;
+}
+
+.container {
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.left-col {
+  padding-right: 1.8rem;
+  border-right: 2px solid #e5d7b6;
+}
+
+.right-col {
+  padding-left: 1.8rem;
+  border-left: 2px solid #e5d7b6;
+}
+
+.small-article,
+.category-block,
+.main-article {
+  border: 1px solid #d8c187;
+  border-radius: 6px;
+  background: white;
+  padding: 1.3rem;
+  box-shadow: 0 6px 18px rgba(185,150,72,0.08);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .4s;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+
+.small-article:hover,
+.category-block:hover,
+.main-article:hover {
+  transform: translateY(-6px);
+  border-color: #b88f2f;
+  box-shadow: 0 10px 24px rgba(185,150,72,0.15);
+}
+
+.article-title {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a5d1c;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.article-desc {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.6rem;
+  line-height: 1.55;
+}
+
+.main-article .article-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.category-block h3 {
+  font-size: 1.05rem;
+  letter-spacing: .05em;
+  color: #6e5524;
+  margin-bottom: 0.7rem;
+}
+
+.pic-frame img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #e3d5a5;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  transition: border-color .4s ease, filter .4s ease, transform .3s ease;
+}
+
+.pic-frame img:hover {
+  border-color: #b88f2f;
+  filter: brightness(1.06);
+  transform: scale(1.02);
+}
+
+.left-col article:not(:last-child),
+.right-col article:not(:last-child) {
+  border-bottom: 1px solid #e5d7b6;
+  padding-bottom: 2rem;
+}
+
+.page-sections {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  padding: 1rem 0 1.3rem;
+  border-bottom: 2px solid #e3d5a5;
+  background: #fff9f1cc;
+  backdrop-filter: blur(5px);
+  margin-bottom: 2.5rem;
+}
+
+.section-link {
+  text-decoration: none;
+  color: #3a2a0d;
+  font-size: 1.2rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: .35s ease;
+}
+
+.section-link:hover {
+  color: #b88f2f;
+  border-bottom: 2px solid #b88f2f;
+}
+
+.article-link {
+  display: block;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1.8rem 0;
+  border-top: 2px solid #d8c187;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  background: #fff8ec;
+  color: #6e5524;
+}
+
+.article-page {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.article-sidebar {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article-sidebar a {
+  padding: 0.8rem 1rem;
+  background: #ffffffdf;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.article-sidebar a:hover {
+  transform: translateY(-4px);
+  border-color: #b88f2f;
+  box-shadow: 0 10px 24px rgba(185,150,72,0.15);
+}
+
+.article-sidebar a.active {
+  background: #b88f2f;
+  color: #fff;
+}
+
+.article-content {
+  flex: 1;
+  background: #ffffffdf;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+
+
